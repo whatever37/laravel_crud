@@ -1,6 +1,10 @@
 @extends('layouts.app')      
 
 @section('content')
-    <h1>Services</h1>
-    <p>This is the services page.</p>
+    <h1>{{$title}}</h1>
+    @if(count($services) > 0)
+        @foreach($services as $service)
+            <li>{{$service}}</li>
+        @endforeach
+    @endif
 @endsection
